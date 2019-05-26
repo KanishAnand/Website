@@ -1,0 +1,65 @@
+@font-face {
+	font-family: Acme;
+	src: url("Acme-Regular.ttf");
+}
+/* 
+.frontpage-image {
+	border-radius: 5%;
+	border: 5px;
+	height: 13%;
+	width: 7%;
+} */
+
+#col {
+	color: blue;
+	text-shadow: 0 0 0;
+}
+.background {
+	background-image: url("../img/background_home.jpeg");
+	background-size: 100% 100%;
+	background-size: cover;
+}
+
+/* #demo {40px
+	padding: 400px;
+	color: black;
+	font-size: 50px;
+} */
+
+.quote {
+	/* overflow: hidden; */
+	width: 60%;
+	height: 0%;
+	position: relative;
+	left: 35%;
+	top: 0%;
+}
+
+.title {
+	width: 50%;
+	height: 60%;
+	position: relative;
+	top: 30%;
+	left: 45%;
+	/* left: 25%; */
+}
+
+#demo1 {
+	/* padding: 400px; */
+	font-size: 60px;
+	font-weight: 200;
+	color: whitesmoke;
+	font-family: Acme;
+	letter-spacing: 5px;
+	text-shadow: 6px 0px 2px blue;
+}
+
+#demo {
+	/* padding: 400px; */
+	font-size: 90px;
+	font-weight: 800;
+	color: whitesmoke;
+	font-family: Acme;
+	letter-spacing: 5px;
+	text-shadow: 7px 0px 2px blue;
+}

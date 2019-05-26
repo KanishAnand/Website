@@ -1,0 +1,206 @@
+@font-face {
+	font-family: ABeez;
+	src: url("ABeeZee-Regular.ttf");
+}
+* {
+	font-family: ABeez;
+}
+#wrapper {
+	width: 100%;
+	/* clear: both; */
+}
+
+.background {
+	background-image: url("../img/background_contact.jpg");
+
+	background-size: 100% 100%;
+}
+
+.icons {
+	/* padding: 10px; */
+	position: relative;
+	display: inline-block;
+	top: 200px;
+	/* left: 30%;*/
+	right: 2%;
+	float: right;
+	margin-top: 15px;
+}
+.likebutton {
+	width: 10%;
+	position: relative;
+	color: #1a8cff;
+	top: 620px;
+	left: 16%;
+	float: left;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a {
+	text-decoration: none !important;
+}
+
+.heading1 {
+	position: relative;
+	overflow: hidden;
+	color: black;
+	left: -15%;
+	top: -30%;
+}
+
+.heading2 {
+	position: relative;
+	overflow: hidden;
+	color: black;
+	left: 10%;
+	top: -5%;
+}
+.fa {
+	font-size: 80px;
+	font-weight: 30px;
+	cursor: pointer;
+	padding: 10px;
+}
+.fa-facebook-square:hover {
+	color: #0b65b0;
+}
+.fa-google-plus:hover {
+	color: red;
+}
+
+.fa-thumbs-up:hover {
+	color: black;
+}
+.fa-quora:hover {
+	color: #b20000;
+}
+.fa-github:hover {
+	color: #a9a9a9;
+}
+.fa-instagram:hover {
+	color: #b30086;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	font-size: 30px;
+	background-color: #1a8cff;
+}
+
+tr:nth-child(even) {
+	background-color: #dcdcdc;
+}
+tr:nth-child(odd) {
+	background-color: white;
+}
+
+th,
+td {
+	padding: 25px;
+	text-align: center;
+}
+
+td {
+	font-size: 20px;
+}
+
+.tableclass {
+	width: 40%;
+	position: relative;
+	left: 8%;
+	top: 200px;
+	box-shadow: 10px 10px 5px;
+	float: left;
+}
+
+hr {
+	color: black;
+	height: 5px;
+}
+
+#like {
+	margin-left: 5px;
+}
+.form {
+	/* border-style: solid; */
+	border-radius: 10px;
+	background-color: #f0f0f0;
+	position: relative;
+	width: 25%;
+	height: 40%;
+	left: 3%;
+	top: 300px;
+	padding: 5%;
+	text-align: center;
+	padding-bottom: 0%;
+	padding-top: 0%;
+	box-shadow: 10px 10px 5px;
+	float: left;
+}
+
+.line {
+	border: 0.2px solid black;
+}
+.name {
+	padding: 2%;
+}
+
+.skill {
+	padding: 2%;
+}
+
+.level {
+	padding: 2%;
+}
+
+.namea {
+	float: left;
+}
+
+.skilla {
+	float: left;
+}
+
+.levela {
+	float: left;
+}
+
+.nameb {
+	padding: 3%;
+	width: 100%;
+}
+
+.skillb {
+	padding: 3%;
+	width: 100%;
+}
+
+.levelb {
+	padding: 3%;
+	width: 100%;
+}
+
+.contactme {
+	font-size: 30px;
+}
+
+.button {
+	border-radius: 10px;
+	float: right;
+	padding: 10px;
+	background-color: #0080ff;
+	color: white;
+}
+
+.dropdown {
+	padding: 3%;
+	width: 100%;
+}

@@ -1,0 +1,84 @@
+@font-face {
+	font-family: ABeez;
+	src: url("ABeeZee-Regular.ttf");
+}
+
+@font-face {
+	font-family: head;
+	src: url("Aclonica.ttf");
+}
+
+* {
+	font-family: ABeez;
+}
+
+h1 {
+	font-family: head;
+	position: relative;
+	top: 10%;
+	text-align: center;
+	/* left: 40%; */
+	padding: 8px;
+	font-size: 100px;
+	font-weight: 100px;
+}
+.text {
+	/* height: 70%; */
+	width: 70%;
+	position: relative;
+	top: 10%;
+	margin: auto;
+	background-color: rgb(232, 232, 232, 0.5);
+	font-size: 30px;
+	text-align: center;
+	/* background-size: cover; */
+}
+li {
+	padding: 5px;
+}
+/* .texts {
+	font-size: 30px;
+	overflow: auto;
+} */
+
+#particles-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -10;
+}
+
+body {
+	position: relative;
+	z-index: -50;
+}
+/* 
+nav {
+	position: static;
+} */
+
+button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* margin-top: 50px; */
+	/* padding: 50px; */
+}
+
+/* p {
+	position: absolute;
+	top: 60%;
+	left: 60%;
+} */
+
+.introduction {
+	background-color: aqua;
+	top: 50%;
+	left: 50%;
+	height: 30%;
+	width: 30%;
+	/* height: 50px;
+	width: 50px;
+	*/
+	opacity: 0.5;
+}

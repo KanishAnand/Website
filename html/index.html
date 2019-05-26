@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<script src="../js/script_home.js"></script>
+		<link rel="stylesheet" href="../css/style_home.css" />
+		<style>
+			@media only screen and (max-width: 700px) {
+				.quote {
+					left: 18%;
+				}
+				/* #demo {
+					font-size: 50px !important;
+				} */
+				.title {
+					left: 18%;
+				}
+				/* #demo1 {
+					font-size: 40px !important;
+				} */
+
+				/* h1 {
+					font-size: 40px !important;
+				} */
+			}
+			@media only screen and (max-width: 1200px) {
+				#demo {
+					font-size: 60px !important;
+				}
+				#demo1 {
+					font-size: 40px !important;
+				}
+			}
+		</style>
+	</head>
+	<body class="background">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button
+						type="button"
+						class="navbar-toggle"
+						data-toggle="collapse"
+						data-target="#myNavbar"
+					>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Home</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="index_about.html">About</a></li>
+						<li><a href="index_gallery.html">Gallery</a></li>
+						<li><a href="index_contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="title">
+			<h1 id="demo"></h1>
+		</div>
+		<div class="quote">
+			<h1 id="demo1">
+				<span id="col">"</span>HARD WORK BEATS TALENT WHEN TALENT DOES
+				NOT WORK HARD<span id="col">..."</span>
+			</h1>
+		</div>
+		<!-- <script>
+			var i = 0;
+			var string = "Hi I'm<br>KANISH ANAND...";
+			var startOfBr = string.indexOf("<br>");
+			var endOfBr = string.indexOf("KAN") - 1;
+			var speed = 150;
+			var demoElm = document.getElementById("demo");
+
+			typewriter();
+			function typewriter() {
+				if (i < string.length) {
+					if (startOfBr == i) {
+						i += 4;
+					}
+					demoElm.innerHTML = string.substr(0, i) + "|";
+
+					i++;
+					setTimeout(typewriter, speed);
+				} else erase();
+			}
+
+			function erase() {
+				if (i >= 0) {
+					if (endOfBr == i) i -= 4;
+					demoElm.innerHTML = string.substr(0, i) + "|";
+					i--;
+					setTimeout(erase, speed);
+				} else {
+					i = 0;
+					typewriter();
+				}
+			}
+		</script> -->
+	</body>
+</html>

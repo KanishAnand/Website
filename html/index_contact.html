@@ -1,0 +1,235 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Contact</title>
+
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../css/style_contact.css" />
+		<style>
+			@media only screen and (max-width: 700px) {
+				.form {
+					width: 80%;
+					left: 12%;
+					margin: auto;
+					top: 80px;
+					height: 55%;
+				}
+				.tableclass {
+					/* width: 0%;
+					left: 2%;
+					right: 2%;
+					overflow: hidden; */
+					overflow-x: hidden;
+				}
+				.likebutton {
+					top: 400px;
+				}
+				.heading1 {
+					width: 120px;
+				}
+				.heading2 {
+					width: 120px;
+				}
+				.icons {
+					/* left: 0px; */
+				}
+			}
+		</style>
+	</head>
+	<body onload="init()" class="background">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button
+						type="button"
+						class="navbar-toggle"
+						data-toggle="collapse"
+						data-target="#myNavbar"
+					>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Home</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="index_about.html">About</a></li>
+						<li><a href="index_gallery.html">Gallery</a></li>
+						<li><a href="index_contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- <form> -->
+		<div id="wrapper">
+			<div class="form">
+				<h2 class="contactme">Rate Me</h2>
+				<hr />
+				<div class="name">
+					<label class="namea" for="name">Name:</label>
+					<input
+						class="nameb"
+						type="text"
+						id="namestore"
+						name="user_name"
+						placeholder="John Doe"
+					/>
+				</div>
+				<div class="skill">
+					<label class="skilla" for="Skill">Skill:</label>
+					<input
+						class="skillb"
+						type="text"
+						id="skillstore"
+						name="my_skill"
+						placeholder="coding"
+					/>
+				</div>
+				<div class="level">
+					<label class="levela" for="Level">Level:</label>
+					<select class="dropdown" name="level" id="levelstore">
+						<option value="Pro">Pro</option>
+						<option value="Intermediate">Intermediate</option>
+						<option value="Noob">Noob</option>
+					</select>
+				</div>
+
+				<button class="button" onclick="store(); return false;">
+					Submit
+				</button>
+			</div>
+			<!-- </form> -->
+
+			<!-- <div class="tableclass"> -->
+			<!-- <div> -->
+			<table class="tableclass" id="displaytable">
+				<tr>
+					<th>Name</th>
+					<th>Skill</th>
+					<th>Level</th>
+				</tr>
+			</table>
+
+			<!-- </div> -->
+
+			<!-- </div> -->
+
+			<div class="likebutton">
+				<i onclick="myFunction()" class="fa fa-thumbs-up"></i>
+
+				<h1 class="heading1">Likes so far</h1>
+				<h1 class="heading2" id="like"></h1>
+			</div>
+			<div class="icons">
+				<div class="fbicon">
+					<a
+						href="https://www.facebook.com/kanish.anand.14"
+						target="_blank"
+						class="fa fa-facebook-square	
+					"
+					></a>
+				</div>
+				<div class="instaicon">
+					<a
+						href="https://www.instagram.com/kanishanand10"
+						target="_blank"
+						class="fa fa-instagram	
+						"
+					></a>
+				</div>
+				<div class="giticon">
+					<a
+						href="https://github.com/KanishAnand"
+						target="_blank"
+						class="fa fa-github	
+							"
+					></a>
+				</div>
+				<div class="quoraicon">
+					<a
+						href="https://www.quora.com/profile/Kanish-Anand-1"
+						target="_blank"
+						class="fa fa-quora	
+								"
+					></a>
+				</div>
+				<div class="gmailicon">
+					<i
+						class="fa fa-google-plus	
+									"
+					></i>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var name, skill, level;
+
+			function init() {
+				var count = localStorage.getItem("counter");
+				document.getElementById("like").innerHTML = count;
+				if (localStorage.record) {
+					dataarray = JSON.parse(localStorage.record);
+					for (var i = 0; i < dataarray.length; i++) {
+						name = dataarray[i].name;
+						skill = dataarray[i].skill; //here at start of function i have not declared var dataarray then how it works here.
+						level = dataarray[i].level;
+						preparetable();
+					}
+				}
+			}
+
+			var dataarray = [];
+			var dataObj;
+			function store() {
+				name = document.getElementById("namestore").value;
+				skill = document.getElementById("skillstore").value;
+				level = document.getElementById("levelstore").value;
+				dataObj = {
+					name: name,
+					skill: skill,
+					level: level
+				};
+				if (name == "" || skill == "") {
+					alert("Please give correct input");
+				} else {
+					dataarray.push(dataObj);
+					//localStorage.setItem("data", JSON.stringify(dataarray));
+					localStorage.record = JSON.stringify(dataarray);
+					preparetable();
+				}
+			}
+			function preparetable() {
+				var table = document.getElementById("displaytable");
+				var row = table.insertRow(-1);
+				var cell1 = row.insertCell(0);
+				var cell2 = row.insertCell(1);
+				var cell3 = row.insertCell(2);
+				cell1.innerHTML = name;
+				cell2.innerHTML = skill;
+				cell3.innerHTML = level;
+				f;
+			}
+			var count = 0;
+			function myFunction() {
+				//x.classList.toggle("fa-thumbs-down");
+				count = localStorage.getItem("counter");
+				++count;
+				//console.log("count");
+				localStorage.setItem("counter", count);
+				document.getElementById("like").innerHTML = count;
+			}
+		</script>
+	</body>
+</html>

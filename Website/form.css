@@ -1,0 +1,82 @@
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: center;
+}
+.form {
+	/* border-style: solid; */
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	width: 300px;
+	height: 350px;
+	background-color: #f0f0f0;
+	padding: 5%;
+	text-align: center;
+	padding-bottom: 0%;
+	padding-top: 0%;
+}
+
+.name {
+	padding: 2%;
+}
+
+.skill {
+	padding: 2%;
+}
+
+.level {
+	padding: 2%;
+}
+
+.namea {
+	float: left;
+}
+
+.skilla {
+	float: left;
+}
+
+.levela {
+	float: left;
+}
+
+.nameb {
+	padding: 3%;
+	width: 100%;
+}
+
+.skillb {
+	padding: 3%;
+	width: 100%;
+}
+
+.levelb {
+	padding: 3%;
+	width: 100%;
+}
+
+.contactme {
+	font-size: 30px;
+}
+
+.button {
+	border-radius: 10px;
+	float: right;
+	padding: 10px;
+	background-color: #0080ff;
+	color: white;
+}
+
+.dropdown {
+	padding: 3%;
+	width: 100%;
+}
